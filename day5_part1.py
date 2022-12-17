@@ -58,13 +58,10 @@ def get_moves_result(moves_instruction_list, stacks_dict):
         source_stack = one_move[1]
         destination_stack = one_move[2]
         stacks_dict = move(crates_number, source_stack, destination_stack, stacks_dict)
-        print(stacks_dict)
     return stacks_dict
 
 def get_elf_code():
     stacks_dict, moves_list = get_input_data()
-    print(stacks_dict)
-    print(moves_list)
     stacks_dict = get_moves_result(moves_list, stacks_dict)
     end_state = stacks_dict.values()
     elf_code = ''
