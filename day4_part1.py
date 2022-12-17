@@ -6,12 +6,12 @@ def get_assignments_list():
     return assignments_list
 
 
-
 def create_areas_list(assignments_list):
     areas_list = []
     for list in assignments_list:
         areas_list.append(list.replace("-",",").split(","))
     return areas_list
+
 
 def get_elfs_all_area(areas_list):
     first_elf_start = int(areas_list[0])
@@ -27,6 +27,7 @@ def get_elfs_all_area(areas_list):
     else:
         second_elf_list = list(range(second_elf_start, second_elf_end+1))
     return first_elf_list, second_elf_list
+
 
 def if_repeat(first_elf_list, second_elf_list):
     for area in first_elf_list:
